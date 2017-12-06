@@ -1,0 +1,40 @@
+body {
+  margin-top: 30px;
+  background-color: palevioletred;
+}
+
+.page-header, h1, h3 {
+  text-align: center;
+}
+
+#tabs {
+  background-color: lavender;
+}
+
+#arithmetic-tabs {
+  background-color: pink;
+}
+
+.jumbotron {
+  color: palevioletred;
+  background-color: lightblue;
+}
+
+.arithmetic-submit-button {
+  text-align: center;
+}
+
+.button {
+  color: white;
+  border: none;
+  background-color: pink;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  background-color: hotpink;
+}
+
+.error {
+  color: red;
+}

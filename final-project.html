@@ -1,0 +1,156 @@
+<!--
+  Name: Salem Shaheen, Salem_Shaheen@student.uml.edu
+  COMP.4160 GUI I
+  Final Project
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Final Project - GUI</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="final-project.css">
+
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>Welcome to the Math Tutor!</h1>
+    </div>
+    <div class="container">
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Arithmetic</a></li>
+          <li><a href="#tabs-2">Algebra</a></li>
+          <li><a href="#tabs-3">More Math...</a></li>          
+        </ul>
+        <div id="tabs-1">
+          <h1>Arithmetic</h1>
+          <div id="arithmetic-tabs">
+            <ul>
+              <li><a href="#addition">Addition</a></li>
+              <li><a href="#subtraction">Subtraction</a></li>
+              <li><a href="#multiplication">Multiplication</a></li>
+              <li><a href="#division">Division</a></li>              
+            </ul>
+            <div id="addition">
+              <h3>Addition</h3>
+              <div class="jumbotron" id="addition-input-div">
+                <button id="add_more_inputs" class="button">Add Input Field</button>
+                <button id="delete-input" class="button">Delete Input Field</button>
+                <br/><br/>
+                <form id="addition-form">
+                  <div class="form-group">
+                    <label for="input-1">Input no. 1</label>
+                    <input type="number" id="input-1" name="input-1" class="form-control" placeholder="5" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="input-2">Input no. 2</label>
+                    <input type="number" id="input-2" name="input-2" class="form-control" placeholder="5" required>
+                  </div>
+                </form>
+                <div class="arithmetic-submit-button">
+                  <button type="submit" form="addition-form" class="button">Add</button>
+                </div>
+              </div>
+              <h3>Answers</h3>
+              <div class="jumbotron" id="addition-answers-div">
+
+              </div>
+            </div>
+            <div id="subtraction">
+              <h3>Subtraction</h3>
+              <div class="jumbotron" id="subtraction-input-div">
+                <button id="add_more_inputs" class="button">Add Input Field</button>
+                <button id="delete-input" class="button">Delete Input Field</button>
+                <br/><br/>
+                <form id="subtraction-form">
+                  <div class="form-group">
+                    <label for="input-1">Input no. 1</label>
+                    <input type="number" id="input-1" name="input-1" class="form-control" placeholder="5" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="input-2">Input no. 2</label>
+                    <input type="number" id="input-2" name="input-2" class="form-control" placeholder="5" required>
+                  </div>
+                </form>
+                <div class="arithmetic-submit-button">
+                  <button type="submit" form="subtraction-form" class="button">Subtract</button>
+                </div>
+              </div>
+              <h3>Answers</h3>
+              <div class="jumbotron" id="subtraction-answers-div">
+              </div>
+            </div>
+            <div id="multiplication">
+              <h3>Multiplication</h3>
+              <div class="jumbotron" id="multiplication-input-div">
+                <button id="add_more_inputs" class="button">Add Input Field</button>
+                <button id="delete-input" class="button">Delete Input Field</button>
+                <br/><br/>
+                <form id="multiplication-form">
+                  <div class="form-group">
+                    <label for="input-1">Input no. 1</label>
+                    <input type="number" id="input-1" name="input-1" class="form-control" placeholder="5" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="input-2">Input no. 2</label>
+                    <input type="number" id="input-2" name="input-2" class="form-control" placeholder="5" required>
+                  </div>
+                </form>
+                <div class="arithmetic-submit-button">
+                  <button type="submit" form="multiplication-form" class="button">Multiply</button>
+                </div>
+              </div>
+              <h3>Answers</h3>
+              <div class="jumbotron" id="multiplication-answers-div">
+              </div>
+            </div>
+            <div id="division">
+              <h3>Division</h3>
+              <div class="jumbotron" id="division-input-div">
+                <button id="add_more_inputs" class="button">Add Input Field</button>
+                <button id="delete-input" class="button">Delete Input Field</button>
+                <br/><br/>
+                <form id="division-form">
+                  <div class="form-group">
+                    <label for="input-1">Input no. 1</label>
+                    <input type="number" id="input-1" name="input-1" class="form-control" placeholder="5" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="input-2">Input no. 2</label>
+                    <input type="number" id="input-2" name="input-2" class="form-control" placeholder="5" required>
+                  </div>
+                </form>
+                <div class="arithmetic-submit-button">
+                  <button type="submit" form="division-form" class="button">Divide</button>
+                </div>
+              </div>
+                <h3>Answers</h3>
+              <div class="jumbotron" id="division-answers-div">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-2">
+          <h1>Algebra</h1>
+        </div>
+        <div id="tabs-3">
+          <h1>More Math</h1>
+        </div>
+      </div>
+    </div>
+    <div id="scripts">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="final-project.js"></script>
+    </div>
+  </body>
+</html>
