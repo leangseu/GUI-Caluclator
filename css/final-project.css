@@ -33,6 +33,10 @@ li {
   font-size: 60px;
 }
 
+#home {
+  color: white;
+  text-decoration: none;
+}
 /*
 #tabs {
   background-color: lavender;
@@ -77,14 +81,21 @@ th, td {
   color: white;
   border-radius: 10px;
   width: auto;
-  min-width: 100px;
-  height: 34px;
+  min-width: 150px;
+  height: 50px;
   background-color: pink;
-  transition: all 0.3s ease 0s;
+/*  background-color: #f39c12;*/
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
 }
 
 .button:hover {
-  background-color: hotpink;
+/*  background-color: hotpink;*/
+  background:#fff;
+  box-shadow:0px 2px 10px 5px #97B1BF;
+  color:#000;
 }
 
 .error {
@@ -126,4 +137,8 @@ input {
 .base {
   color:black !important;
   font-size: 40px !important;
+}
+
+p {
+  color: black;
 }
