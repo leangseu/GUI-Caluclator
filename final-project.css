@@ -13,7 +13,6 @@ body {
   margin-top: 30px;
 /*  background-color: palevioletred;*/
   background:linear-gradient(#4389A2,#5C258D);
-  color: white;
 }
 
 li {
@@ -25,6 +24,7 @@ li {
 .page-header {
   text-align: center;
   font-family: Pacifico, cursive;
+  color: white;
   border: none;
 }
 
@@ -39,16 +39,20 @@ li {
 }
 */
 
+/*
 #arithmetic-tabs {
   background-color: pink;
 }
+*/
 
+/*
 #linear-algebra-tabs {
   background-color: lightgreen;
 }
+*/
 
 .jumbotron {
-  color: palevioletred;
+/*  color: palevioletred;*/
   background-color: lightblue;
 }
 
@@ -71,7 +75,10 @@ th, td {
 
 .button {
   color: white;
-  border: none;
+  border-radius: 10px;
+  width: auto;
+  min-width: 100px;
+  height: 34px;
   background-color: pink;
   transition: all 0.3s ease 0s;
 }
@@ -85,7 +92,7 @@ th, td {
 }
 
 input::placeholder {
-  color: rgba(5,5,5, 0.15);
+  color: rgba(5,5,5, 0.15) !important;
 }
 
 .ui-widget-header {
@@ -93,6 +100,30 @@ input::placeholder {
   background: rgba(0, 0, 0, 0) !important; 
 }
 
+.ui-widget-content {
+  background: rgba(256, 256, 256, .1) !important;
+  color: white;
+}
+
 .ui-state-active {
-  background: rgba(0, 0, 0, 0) !important;
+  background: rgba(256, 256, 256, .1) !important;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+  color: white;
+}
+
+label {
+  color: black;
+}
+
+input {
+  height: 34px;
+  padding: 6px 12px;
+  color: black;
+}
+
+.base {
+  color:black !important;
+  font-size: 40px !important;
 }

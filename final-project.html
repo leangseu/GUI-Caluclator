@@ -154,45 +154,48 @@
               <h3>Simplify</h3>
               <div class="jumbotron" id="simplify-input-div">
                 <form id="simplify-form">
-                  <input type="text" name="expression-input" placeholder='x*x +x +10 +x +x^2'>
-                  <input type="button" name="simplify-button" value="Simplify">
+                  <input type="text" name="expression-input" placeholder='x*x +x +10 +x +x^2' class="form-control" required><br><br>
+                  <input type="button" name="simplify-button" value="Simplify" class="button">
                 </form>
-                <h3>Answers</h3>
-                <div class="jumbotron" id="simplifyAnswerDiv">
-
-                </div>
               </div>
+              <h3>Answers</h3>
+                <div class="jumbotron" id="simplifyAnswerDiv">
+                  <p id="SimplifyInput"></p>
+                  <p id="SimplifyOutput"></p>
+                </div>
             </div>
             <div id="solve">
               <h3>Solve</h3>
               <div class="jumbotron" id="solve-input-div">
                 <form id="solve-form">
                   <label>Solve up to power of 3 or Cubic Equations</label> <br>
-                  <input type="text" name="expression-input" placeholder='x^2 + 2x + 10 = 18'>
-                  <input type="text" name="variable-input" placeholder='x'>
-                  <input type="button" name="solve-button" value="Solve">
+                  <input type="text" name="expression-input" placeholder='x^2 + 2x + 10 = 18' class="form-control" required> <br>
+                  <input type="text" name="variable-input" placeholder='x' required><br><br><br>
+                  <input type="button" name="solve-button" value="Solve" class="button">
                 </form>
-                <h3>Answers</h3>
-                <div class="jumbotron" id="SolveAnswerDiv">
-
-                </div>
               </div>
+              <h3>Answers</h3>
+                <div class="jumbotron" id="SolveAnswerDiv">
+                  <p id="SolveInput"></p>
+                  <p id="SolveOutput"></p>
+                </div>
             </div>
             <div id="evaluate">
               <h3>Evaluate</h3>
               <div class="jumbotron" id="evaluate-input-div">
                 <form id="evaluate-form">
-                  <input type="text" name="expression-input" placeholder='x^2 + 2x + 10'>
+                  <input type="text" name="expression-input" placeholder='x^2 + 2x + 10' class="form-control" required>
                   <br>
                   <label>x = </label>
-                  <input type="number" name="variable-input" placeholder='4' >
-                  <input type="button" name="evaluate-button" value="Evaluate">
+                  <input type="number" name="variable-input" placeholder='4'  required> <br> <br><br>
+                  <input type="button" name="evaluate-button" value="Evaluate" class="button">
                 </form>
-                <h3>Answers</h3>
-                <div class="jumbotron" id="EvaluateAnswerDiv">
-
-                </div>
               </div>
+              <h3>Answers</h3>
+                <div class="jumbotron" id="EvaluateAnswerDiv">
+                  <p id="EvaluateInput"></p>
+                  <p id="EvaluateOutput"></p>
+                </div>
             </div>
           </div>
         </div>

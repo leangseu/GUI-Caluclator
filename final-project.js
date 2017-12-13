@@ -456,7 +456,7 @@ $(function() {
   $("#simplify-form input[name=simplify-button]").click(() => {
     var exp = algebra.parse($( "#simplify-form input[name='expression-input']").val());
     var answer = exp.simplify();
-    katex.render(algebra.toTex(answer), simplifyAnswerDiv);
+    katex.render("output: " + algebra.toTex(answer), SimplifyOutput);
   });
   
   // solve on click
@@ -467,7 +467,8 @@ $(function() {
     if (answer == '') {
       answer = '0';
     }
-    katex.render("x = " + algebra.toTex(answer), SolveAnswerDiv);
+    katex.render("input: " + algebra.toTex(exp) + ", " + v.toString(), SolveInput);
+    katex.render("output: " + v.toString() + " = " + algebra.toTex(answer), SolveOutput);
   });
   
   // evaluate on click
@@ -478,7 +479,8 @@ $(function() {
     if (answer == '') {
       answer = '0';
     }
-    katex.render("x = " + algebra.toTex(answer), EvaluateAnswerDiv);
+    katex.render("input: " + algebra.toTex(exp) + ", x = " + v, EvaluateInput);
+    katex.render("output:   x = " + algebra.toTex(answer), EvaluateOutput);
 
   });
   
