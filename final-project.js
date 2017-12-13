@@ -1,7 +1,7 @@
 /**
 *  Names: 
 *   Salem Shaheen, Salem_Shaheen@student.uml.edu
-*   Leang Seu, Lang_Seu@student.uml.edu
+*   Leangseu Kim, Leangseu_kim@student.uml.edu
 *   Rushabh Doshi, Rushabh_Doshi@student.uml.edu
 *  COMP.4160 GUI I
 *  Final Project
@@ -445,3 +445,41 @@ function matrix_transpose(matrix) {
   }
   return transposed_matrix;
 }
+
+// USING  http://algebra.js.org/
+$(function() {
+  $("#algebra-tabs").tabs();
+})
+
+$(function() {
+  // simplify on click
+  $("#simplify-form input[name=simplify-button]").click(() => {
+    var exp = algebra.parse($( "#simplify-form input[name='expression-input']").val());
+    var answer = exp.simplify();
+    katex.render(algebra.toTex(answer), simplifyAnswerDiv);
+  });
+  
+  // solve on click
+  $("#solve-form input[name=solve-button]").click(() => {
+    var exp = algebra.parse($( "#solve-form input[name='expression-input']").val());
+    var v = algebra.parse($( "#solve-form input[name='variable-input']").val());
+    var answer = exp.solveFor(v.toString());
+    if (answer == '') {
+      answer = '0';
+    }
+    katex.render("x = " + algebra.toTex(answer), SolveAnswerDiv);
+  });
+  
+  // evaluate on click
+  $("#evaluate-form input[name=evaluate-button]").click(() => {
+    var exp = algebra.parse($( "#evaluate-form input[name='expression-input']").val());
+    var v = algebra.parse($( "#evaluate-form input[name='variable-input']").val()) || 0;
+    var answer = exp.eval({x : v});
+    if (answer == '') {
+      answer = '0';
+    }
+    katex.render("x = " + algebra.toTex(answer), EvaluateAnswerDiv);
+
+  });
+  
+})

@@ -1,7 +1,7 @@
 <!--
   Names: 
     Salem Shaheen, Salem_Shaheen@student.uml.edu
-    Leang Seu, Lang_Seu@student.uml.edu
+    Leangseu Kim, Leangseu_kim@student.uml.edu
     Rushabh Doshi, Rushabh_Doshi@student.uml.edu
   COMP.4160 GUI I
   Final Project
@@ -15,7 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Final Project - GUI</title>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" integrity="sha384-exe4Ak6B0EoJI0ogGxjJ8rn+RN3ftPnEQrGwX59KTCl5ybGzvHGKjhPKk/KC3abb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="final-project.css">
@@ -30,6 +31,7 @@
       <div id="tabs">
         <ul>
           <li><a href="#tabs-1">Arithmetic</a></li>
+          <li><a href="#tabs-2">Algebra</a></li>
           <li><a href="#tabs-3">Linear Algebra</a></li>          
         </ul>
         <div id="tabs-1">
@@ -136,6 +138,58 @@
               </div>
                 <h3>Answers</h3>
               <div class="jumbotron" id="division-answers-div">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-2">
+          <h1>Algrebra</h1>
+          <div id="algebra-tabs">
+            <ul>
+              <li><a href="#simplify">Simplify</a></li>
+              <li><a href="#solve">Solve</a></li>            
+              <li><a href="#evaluate">Evaluate</a></li>         
+            </ul>
+            <div id="simplify">
+              <h3>Simplify</h3>
+              <div class="jumbotron" id="simplify-input-div">
+                <form id="simplify-form">
+                  <input type="text" name="expression-input" placeholder='x*x +x +10 +x +x^2'>
+                  <input type="button" name="simplify-button" value="Simplify">
+                </form>
+                <h3>Answers</h3>
+                <div class="jumbotron" id="simplifyAnswerDiv">
+
+                </div>
+              </div>
+            </div>
+            <div id="solve">
+              <h3>Solve</h3>
+              <div class="jumbotron" id="solve-input-div">
+                <form id="solve-form">
+                  <label>Solve up to power of 3 or Cubic Equations</label> <br>
+                  <input type="text" name="expression-input" placeholder='x^2 + 2x + 10 = 18'>
+                  <input type="text" name="variable-input" placeholder='x'>
+                  <input type="button" name="solve-button" value="Solve">
+                </form>
+                <h3>Answers</h3>
+                <div class="jumbotron" id="SolveAnswerDiv">
+
+                </div>
+              </div>
+            </div>
+            <div id="evaluate">
+              <h3>Evaluate</h3>
+              <div class="jumbotron" id="evaluate-input-div">
+                <form id="evaluate-form">
+                  <input type="text" name="expression-input" placeholder='x^2 + 2x + 10'>
+                  <input type="text" name="variable-input" placeholder='x = 4'>
+                  <input type="button" name="evaluate-button" value="Evaluate">
+                </form>
+                <h3>Answers</h3>
+                <div class="jumbotron" id="EvaluateAnswerDiv">
+
+                </div>
               </div>
             </div>
           </div>
@@ -320,9 +374,11 @@
       </div>
     </div>
     <div id="scripts">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+      <script src="http://algebra.js.org/javascripts/algebra-0.2.6.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="final-project.js"></script>
     </div>
