@@ -1,5 +1,8 @@
 <!--
-  Name: Salem Shaheen, Salem_Shaheen@student.uml.edu
+  Names: 
+    Salem Shaheen, Salem_Shaheen@student.uml.edu
+    Leang Seu, Lang_Seu@student.uml.edu
+    Rushabh Doshi, Rushabh_Doshi@student.uml.edu
   COMP.4160 GUI I
   Final Project
 -->
@@ -20,14 +23,14 @@
   </head>
   <body>
     <div class="page-header">
-      <h1>Welcome to the Math Tutor!</h1>
+      <h1>Quick Maths Calculator</h1>
+      <h3>By, Rushabh Doshi, Salem Shaheen, and Leang Seu</h3>
     </div>
     <div class="container">
       <div id="tabs">
         <ul>
           <li><a href="#tabs-1">Arithmetic</a></li>
-          <li><a href="#tabs-2">Algebra</a></li>
-          <li><a href="#tabs-3">More Math...</a></li>          
+          <li><a href="#tabs-3">Linear Algebra</a></li>          
         </ul>
         <div id="tabs-1">
           <h1>Arithmetic</h1>
@@ -119,12 +122,12 @@
                 <br/><br/>
                 <form id="division-form">
                   <div class="form-group">
-                    <label for="input-1">Input no. 1</label>
-                    <input type="number" id="input-1" name="input-1" class="form-control" placeholder="5" required>
+                    <label for="input1">Input no. 1</label>
+                    <input type="number" id="input-1" name="input1" class="form-control dividend" placeholder="5" required>
                   </div>
                   <div class="form-group">
-                    <label for="input-2">Input no. 2</label>
-                    <input type="number" id="input-2" name="input-2" class="form-control" placeholder="5" required>
+                    <label for="input2">Input no. 2</label>
+                    <input type="number" id="input-2" name="input2" class="form-control divisor" placeholder="5" required>
                   </div>
                 </form>
                 <div class="arithmetic-submit-button">
@@ -137,11 +140,182 @@
             </div>
           </div>
         </div>
-        <div id="tabs-2">
-          <h1>Algebra</h1>
-        </div>
         <div id="tabs-3">
-          <h1>More Math</h1>
+          <h1>Linear Algebra</h1>
+          <div id="linear-algebra-tabs">
+            <ul>
+              <li><a href="#scalarmult">Scalar Multiplication</a></li>
+              <li><a href="#mattranspose">Matrix Transpose</a></li>
+              <li><a href="#mataddition">Matrix Addition</a></li>
+              <li><a href="#matmultiplication">Matrix Multiplication</a></li>
+              <li><a href="#dotprod">Dot Product</a></li>
+            </ul>
+            <div id="scalarmult">
+              <h3>Scalar Multiplication</h3>
+              <div class="jumbotron" id="scalar-mult-input">
+                <form id="scalar-mult-form">
+                  <div class="form-group">
+                    <h5>Input the scalar here</h5>
+                    <input type="number" id="scalar-input" name="scalar-input" class="form-control" placeholder="5" required>
+                  </div>
+                  <div class="form-group">
+                    <h5>Input the 3x3 matrix here</h5>
+                    <h5></h5>
+                    <input type="number" id="scalmult00" name="field00" width="5px" required >
+                    <input type="number" id="scalmult01" name="field01" width="5px" required >
+                    <input type="number" id="scalmult02" name="field02" width="5px" required >
+                    <br/>
+                    <input type="number" id="scalmult10" name="field10" width="5px" required >
+                    <input type="number" id="scalmult11" name="field11" width="5px" required >
+                    <input type="number" id="scalmult12" name="field12" width="5px" required >
+                    <br/>
+                    <input type="number" id="scalmult20" name="field20" width="5px" required >
+                    <input type="number" id="scalmult21" name="field21" width="5px" required >
+                    <input type="number" id="scalmult22" name="field22" width="5px" required >
+                  </div>
+                  <input type="submit" class='button' value="Submit">
+                </form>
+              </div>
+              <h3>Result</h3>
+              <div class="jumbotron" id="scalar-mult-output">
+
+              </div>
+            </div>
+            <div id="mattranspose">
+              <h3>Matrix Transpose</h3>
+              <div class="jumbotron" id="trans-input-div">
+                <form id="transpose-form">
+                  <h5>Please enter your 3x3 matrix.</h5>
+                  <input type="number" id="trans00" name="field00" width="5px" required >
+                  <input type="number" id="trans01" name="field01" width="5px" required >
+                  <input type="number" id="trans02" name="field02" width="5px" required >     
+                  <br/>
+                  <input type="number" id="trans10" name="field10" width="5px" required >
+                  <input type="number" id="trans11" name="field11" width="5px" required >
+                  <input type="number" id="trans12" name="field12" width="5px" required >
+                  <br/>
+                  <input type="number" id="trans20" name="field10" width="5px" required >
+                  <input type="number" id="trans21" name="field11" width="5px" required >
+                  <input type="number" id="trans22" name="field12" width="5px" required >
+                  <br/>
+                  <br/>
+                  <input type="submit" class="button" value="Transpose">
+                </form>
+              </div>
+              <h3>Result</h3>
+              <div class="jumbotron" id="trans-output-div">
+
+              </div>
+            </div>
+            <div id="mataddition">
+              <h3>Matrix Addition</h3>
+              <div class="jumbotron" id="madd-input-div">
+                <form id="matadd-form">
+                  <h5>Please enter your 3x3 matrix A.</h5>
+                  <input type="number" id="addA00" name="field00" width="5px" required >
+                  <input type="number" id="addA01" name="field01" width="5px" required >
+                  <input type="number" id="addA02" name="field02" width="5px" required >     
+                  <br/>
+                  <input type="number" id="addA10" name="field10" width="5px" required >
+                  <input type="number" id="addA11" name="field11" width="5px" required >
+                  <input type="number" id="addA12" name="field12" width="5px" required >
+                  <br/>
+                  <input type="number" id="addA20" name="field10" width="5px" required >
+                  <input type="number" id="addA21" name="field11" width="5px" required >
+                  <input type="number" id="addA22" name="field12" width="5px" required >
+                  <br/>
+                  <br/>
+                  <h5>Please enter your 3x3 matrix B</h5>
+                  <input type="number" id="addB00" name="field00" width="5px" required >
+                  <input type="number" id="addB01" name="field01" width="5px" required >
+                  <input type="number" id="addB02" name="field02" width="5px" required >     
+                  <br/>
+                  <input type="number" id="addB10" name="field10" width="5px" required >
+                  <input type="number" id="addB11" name="field11" width="5px" required >
+                  <input type="number" id="addB12" name="field12" width="5px" required >
+                  <br/>
+                  <input type="number" id="addB20" name="field10" width="5px" required >
+                  <input type="number" id="addB21" name="field11" width="5px" required >
+                  <input type="number" id="addB22" name="field12" width="5px" required >
+                  <br/>
+                  <br/>
+                  <input type="submit" class="button" value="Add">
+                </form>
+              </div>
+              <h3>Result</h3>
+              <div class="jumbotron" id="madd-output-div">
+
+              </div>
+            </div>
+            <div id="matmultiplication">
+              <h3>Matrix Multiplication</h3>
+              <div class="jumbotron" id="mmult-input-div">
+                <form id="mmult-form">
+                  <h5>Please enter your 3x3 matrix A.</h5>
+                  <input type="number" id="multA00" name="field00" width="5px" required >
+                  <input type="number" id="multA01" name="field01" width="5px" required >
+                  <input type="number" id="multA02" name="field02" width="5px" required >     
+                  <br/>
+                  <input type="number" id="multA10" name="field10" width="5px" required >
+                  <input type="number" id="multA11" name="field11" width="5px" required >
+                  <input type="number" id="multA12" name="field12" width="5px" required >
+                  <br/>
+                  <input type="number" id="multA20" name="field10" width="5px" required >
+                  <input type="number" id="multA21" name="field11" width="5px" required >
+                  <input type="number" id="multA22" name="field12" width="5px" required >
+                  <br/>
+                  <br/>
+                  <h5>Please enter your 3x3 matrix B</h5>
+                  <input type="number" id="multB00" name="field00" width="5px" required >
+                  <input type="number" id="multB01" name="field01" width="5px" required >
+                  <input type="number" id="multB02" name="field02" width="5px" required >     
+                  <br/>
+                  <input type="number" id="multB10" name="field10" width="5px" required >
+                  <input type="number" id="multB11" name="field11" width="5px" required >
+                  <input type="number" id="multB12" name="field12" width="5px" required >
+                  <br/>
+                  <input type="number" id="multB20" name="field10" width="5px" required >
+                  <input type="number" id="multB21" name="field11" width="5px" required >
+                  <input type="number" id="multB22" name="field12" width="5px" required >
+                  <br/>
+                  <br/>
+                  <input type="submit" class="button" value="Multiply">
+                </form>
+              </div>
+              <h3>Result</h3>
+              <div class="jumbotron" id="mmult-output-div">
+    
+              </div>
+            </div>
+            <div id="dotprod">
+              <h3>Dot Product</h3>
+              <div class="jumbotron" id="dotp-input-div">
+                <form id="dot-product-input">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <h5>Please enter the first Vector.</h5>
+                      <input type="number" id="v10" required>
+                      <input type="number" id="v11" required>
+                      <input type="number" id="v12" required>
+                    </div>
+                    <div class="col-sm-4">
+                      <h5>Please enter the second Vector.</h5>
+                      <input type="number" id="v20" required>
+                      <input type="number" id="v21" required>
+                      <input type="number" id="v22" required>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <input type="submit" class="button" value="Calculate Dot Product">
+                </form>
+              </div>
+              <h3>Result</h3>
+              <div class="jumbotron" id="dot-product-result">
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
