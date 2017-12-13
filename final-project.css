@@ -7,18 +7,37 @@
   Final Project
 */
 
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Merriweather|PT+Serif');
+
 body {
   margin-top: 30px;
-  background-color: palevioletred;
+/*  background-color: palevioletred;*/
+  background:linear-gradient(#4389A2,#5C258D);
+  color: white;
 }
 
-.page-header, h1, h3 {
+li {
+  font-family: 'PT Serif', monospace;
+  font-size: 20px;
+  margin: 2px 5px;
+}
+
+.page-header {
   text-align: center;
+  font-family: Pacifico, cursive;
+  border: none;
 }
 
+.page-header h1 {
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+/*
 #tabs {
   background-color: lavender;
 }
+*/
 
 #arithmetic-tabs {
   background-color: pink;
@@ -63,4 +82,17 @@ th, td {
 
 .error {
   color: red;
+}
+
+input::placeholder {
+  color: rgba(5,5,5, 0.15);
+}
+
+.ui-widget-header {
+  border: none;
+  background: rgba(0, 0, 0, 0) !important; 
+}
+
+.ui-state-active {
+  background: rgba(0, 0, 0, 0) !important;
 }
